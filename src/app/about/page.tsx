@@ -107,7 +107,11 @@ export default function AboutPage() {
                     </p>
                     <div className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
                         <div className="w-full max-w-sm bg-white rounded-xl shadow-md overflow-hidden">
-                            <div className="h-64 bg-gray-200"></div>
+                            <img
+                                src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?q=80&w=880&auto=format&fit=crop"
+                                alt="Giuseppe Romano"
+                                className="w-full h-64 object-cover"
+                            />
                             <div className="p-6 text-center">
                                 <h3 className="text-xl font-bold mb-1">Giuseppe Romano</h3>
                                 <p className="text-orange-500 font-medium mb-2">Founder & Head Chef</p>
@@ -118,7 +122,11 @@ export default function AboutPage() {
                         </div>
 
                         <div className="w-full max-w-sm bg-white rounded-xl shadow-md overflow-hidden">
-                            <div className="h-64 bg-gray-200"></div>
+                            <img
+                                src="https://images.unsplash.com/photo-1449818841066-458e2db9db7f?q=80&w=880&auto=format&fit=crop"
+                                alt="Maria Romano"
+                                className="w-full h-64 object-cover"
+                            />
                             <div className="p-6 text-center">
                                 <h3 className="text-xl font-bold mb-1">Maria Romano</h3>
                                 <p className="text-orange-500 font-medium mb-2">Executive Chef</p>
@@ -129,7 +137,11 @@ export default function AboutPage() {
                         </div>
 
                         <div className="w-full max-w-sm bg-white rounded-xl shadow-md overflow-hidden">
-                            <div className="h-64 bg-gray-200"></div>
+                            <img
+                                src="https://images.unsplash.com/photo-1583394293211-45718f7eb6b0?q=80&w=880&auto=format&fit=crop"
+                                alt="Antonio Romano"
+                                className="w-full h-64 object-cover"
+                            />
                             <div className="p-6 text-center">
                                 <h3 className="text-xl font-bold mb-1">Antonio Romano</h3>
                                 <p className="text-orange-500 font-medium mb-2">Pastry Chef</p>
