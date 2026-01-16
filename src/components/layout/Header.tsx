@@ -4,9 +4,11 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { Menu, X, Phone, ShoppingCart } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
+import { useCart } from '@/lib/CartContext';
 
 export function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { itemCount } = useCart();
 
     const navLinks = [
         { href: '/', label: 'Home' },
@@ -46,9 +48,14 @@ export function Header() {
                             <span className="font-medium">(555) 123-4567</span>
                         </a>
                         <Link href="/order">
-                            <Button>
+                            <Button className="relative">
                                 <ShoppingCart size={20} className="mr-2" />
                                 Order Now
+                                {itemCount > 0 && (
+                                    <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">
+                                        {itemCount}
+                                    </span>
+                                )}
                             </Button>
                         </Link>
                     </div>
@@ -78,9 +85,14 @@ export function Header() {
                                 </Link>
                             ))}
                             <Link href="/order" onClick={() => setIsMenuOpen(false)}>
-                                <Button className="w-full">
+                                <Button className="w-full relative">
                                     <ShoppingCart size={20} className="mr-2" />
                                     Order Now
+                                    {itemCount > 0 && (
+                                        <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">
+                                            {itemCount}
+                                        </span>
+                                    )}
                                 </Button>
                             </Link>
                         </div>

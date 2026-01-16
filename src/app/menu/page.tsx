@@ -7,10 +7,12 @@ import { MenuItemCard } from '@/components/menu/MenuItemCard';
 import { CategoryFilter } from '@/components/menu/CategoryFilter';
 import { Input } from '@/components/ui/Input';
 import { Search, UtensilsCrossed } from 'lucide-react';
+import { useCart } from '@/lib/CartContext';
 
 export default function MenuPage() {
     const [selectedCategory, setSelectedCategory] = useState<MenuCategory | 'all'>('all');
     const [searchQuery, setSearchQuery] = useState('');
+    const { addItem } = useCart();
 
     // Filter menu items
     const filteredItems = menuItems.filter((item) => {
@@ -21,9 +23,7 @@ export default function MenuPage() {
     });
 
     const handleAddToCart = (item: MenuItem) => {
-        // TODO: Implement cart functionality
-        console.log('Add to cart:', item);
-        alert(`${item.name} added to cart!`);
+        addItem(item);
     };
 
     return (
