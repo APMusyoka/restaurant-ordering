@@ -105,7 +105,7 @@ export default function AboutPage() {
                     <p className="text-xl text-gray-600 text-center mb-12 max-w-2xl mx-auto">
                         The heart and soul behind every delicious dish
                     </p>
-                    <div className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
+                    <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
                         <div className="w-full max-w-sm bg-white rounded-xl shadow-md overflow-hidden">
                             <img
                                 src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?q=80&w=880&auto=format&fit=crop"
