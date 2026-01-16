@@ -17,7 +17,7 @@ A modern, production-ready restaurant website with online ordering, reservations
 - 📅 **Reservations** - Table booking with date/time selection and form validation
 - 📸 **Gallery** - Photo showcase with category filters and lightbox
 - ℹ️ **About Page** - Restaurant story, values, and team
-- 📞 **Contact Page** - Contact form with validation and info display
+- 📞 **Contact Page** - Contact form, embedded Google Map, and info display
 
 ### Design & UX
 - 📱 **Fully Responsive** - Mobile-first design for all devices
@@ -34,6 +34,7 @@ A modern, production-ready restaurant website with online ordering, reservations
 - 🎨 **Design System** - Reusable UI components (Button, Input, Card)
 - 🌐 **Next.js 14** - App Router with Server Components
 - 🎭 **Custom Fonts** - Inter (sans-serif) and Playfair Display (serif)
+- 📍 **Google Maps** - Embedded iframe integration
 
 ## 🛠️ Tech Stack
 
@@ -43,6 +44,7 @@ A modern, production-ready restaurant website with online ordering, reservations
 - **State Management**: React Context API
 - **Form Handling**: React Hook Form 7.71.1
 - **Icons**: Lucide React 0.562.0
+- **Notifications**: React Hot Toast
 - **Utilities**: clsx for conditional classes
 
 ## 📋 Getting Started
@@ -163,9 +165,9 @@ Detailed documentation available in the `/docs` folder:
 
 ### Phase 1: Polish & Refine
 - [ ] Replace placeholder images with real photos
-- [ ] Integrate Google Maps on contact page
+- [x] Integrate Google Maps on contact page (Embedded Iframe)
 - [ ] Add loading skeletons
-- [ ] Implement toast notifications
+- [x] Implement toast notifications
 - [ ] Persist cart to localStorage
 - [ ] Add page transitions
 
