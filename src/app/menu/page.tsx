@@ -1,18 +1,31 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { MenuItem, MenuCategory } from '@/types';
 import { menuItems } from '@/data/menu';
 import { MenuItemCard } from '@/components/menu/MenuItemCard';
 import { CategoryFilter } from '@/components/menu/CategoryFilter';
 import { Input } from '@/components/ui/Input';
-import { Search, UtensilsCrossed } from 'lucide-react';
+import { Search, UtensilsCrossed, ChevronsDown, ChevronsUp } from 'lucide-react';
 import { useCart } from '@/lib/CartContext';
 
 export default function MenuPage() {
     const [selectedCategory, setSelectedCategory] = useState<MenuCategory | 'all'>('all');
     const [searchQuery, setSearchQuery] = useState('');
+    const [isFiltersOpen, setIsFiltersOpen] = useState(true);
     const { addItem } = useCart();
+
+    // Auto-collapse filters on scroll
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 100 && isFiltersOpen) {
+                setIsFiltersOpen(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [isFiltersOpen]);
 
     // Filter menu items
     const filteredItems = menuItems.filter((item) => {
@@ -42,27 +55,37 @@ export default function MenuPage() {
             </section>
 
             {/* Search and Filter Section */}
-            <section className="py-12 bg-white sticky top-20 z-40 shadow-md">
-                <div className="container mx-auto px-4">
-                    {/* Search Bar */}
-                    <div className="max-w-xl mx-auto mb-8">
-                        <div className="relative">
+            <section className="bg-white sticky top-16 md:top-20 z-40 shadow-md transition-all duration-300">
+                <div className="container mx-auto px-4 py-4">
+                    {/* Search Bar & Toggle */}
+                    <div className="max-w-xl mx-auto flex gap-2 items-center mb-4 transition-all duration-300">
+                        <div className="relative flex-1">
                             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
                             <input
                                 type="text"
                                 placeholder="Search menu items..."
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
+                                onFocus={() => setIsFiltersOpen(true)}
                                 className="w-full pl-12 pr-4 py-3 rounded-lg border-2 border-gray-300 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-100 transition-all"
                             />
                         </div>
+                        <button
+                            onClick={() => setIsFiltersOpen(!isFiltersOpen)}
+                            className="p-3 bg-gray-100 rounded-lg text-gray-600 hover:bg-gray-200 hover:text-orange-500 transition-colors"
+                            aria-label="Toggle filters"
+                        >
+                            {isFiltersOpen ? <ChevronsUp size={24} /> : <ChevronsDown size={24} />}
+                        </button>
                     </div>
 
-                    {/* Category Filter */}
-                    <CategoryFilter
-                        selectedCategory={selectedCategory}
-                        onCategoryChange={setSelectedCategory}
-                    />
+                    {/* Category Filter - Collapsible */}
+                    <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isFiltersOpen ? 'max-h-96 opacity-100 mb-4' : 'max-h-0 opacity-0 mb-0'}`}>
+                        <CategoryFilter
+                            selectedCategory={selectedCategory}
+                            onCategoryChange={setSelectedCategory}
+                        />
+                    </div>
                 </div>
             </section>
 
