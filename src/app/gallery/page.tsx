@@ -62,7 +62,7 @@ export default function GalleryPage() {
             <section className="bg-white sticky top-16 md:top-20 z-40 shadow-md transition-all duration-300">
                 <div className="container mx-auto px-4 py-4">
                     {/* Toggle Bar */}
-                    <div className="max-w-xl mx-auto flex gap-2 items-center transition-all duration-300">
+                    <div className={`max-w-xl mx-auto flex gap-2 items-center transition-all duration-300 ${isFiltersOpen ? 'mb-4' : 'mb-0'}`}>
                         <div
                             className="relative flex-1 bg-gray-50 border-2 border-gray-300 rounded-lg py-3 px-4 flex items-center cursor-pointer hover:border-orange-500 transition-colors"
                             onClick={() => setIsFiltersOpen(!isFiltersOpen)}
