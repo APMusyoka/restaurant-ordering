@@ -1,6 +1,6 @@
 import { restaurantInfo } from '@/data/restaurant';
 import { Button } from '@/components/ui/Button';
-import { Users, Award, Heart, UtensilsCrossed } from 'lucide-react';
+import { Users, Award, Heart, UtensilsCrossed, ChefHat } from 'lucide-react';
 import Link from 'next/link';
 
 export default function AboutPage() {
@@ -9,7 +9,10 @@ export default function AboutPage() {
             {/* Hero Section */}
             <section className="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-20">
                 <div className="container mx-auto px-4 text-center">
-                    <h1 className="text-5xl md:text-6xl font-bold my-4 text-gray-200">Our Story</h1>
+                    <div className="flex justify-center my-4">
+                        <ChefHat size={48} />
+                    </div>
+                    <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-200">Our Story</h1>
                     <p className="text-xl md:text-2xl max-w-2xl mx-auto">
                         A passion for authentic Italian cuisine since 1985
                     </p>
@@ -17,7 +20,7 @@ export default function AboutPage() {
             </section>
 
             {/* Story Section */}
-            <section className="py-20">
+            <section className="pb-20 pt-2">
                 <div className="container mx-auto px-4 max-w-4xl">
                     <div className="bg-white rounded-xl shadow-lg p-8 md:p-12">
                         <h2 className="text-4xl font-bold mb-6 text-center">Welcome to Bella Cucina</h2>
