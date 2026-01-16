@@ -106,7 +106,7 @@ export default function AboutPage() {
                         The heart and soul behind every delicious dish
                     </p>
                     <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
-                        <div className="w-full max-w-sm bg-white rounded-xl shadow-md overflow-hidden">
+                        <div className="w-full max-w-[290px] bg-white rounded-xl shadow-md overflow-hidden">
                             <img
                                 src="https://images.unsplash.com/photo-1583394293214-28ded15ee548?q=80&w=880&auto=format&fit=crop"
                                 alt="Giuseppe Romano"
@@ -121,7 +121,7 @@ export default function AboutPage() {
                             </div>
                         </div>
 
-                        <div className="w-full max-w-sm bg-white rounded-xl shadow-md overflow-hidden">
+                        <div className="w-full max-w-[290px] bg-white rounded-xl shadow-md overflow-hidden">
                             <img
                                 src="https://images.unsplash.com/photo-1449818841066-458e2db9db7f?q=80&w=880&auto=format&fit=crop"
                                 alt="Maria Romano"
@@ -136,7 +136,7 @@ export default function AboutPage() {
                             </div>
                         </div>
 
-                        <div className="w-full max-w-sm bg-white rounded-xl shadow-md overflow-hidden">
+                        <div className="w-full max-w-[290px] bg-white rounded-xl shadow-md overflow-hidden">
                             <img
                                 src="https://images.unsplash.com/photo-1583394293211-45718f7eb6b0?q=80&w=880&auto=format&fit=crop"
                                 alt="Antonio Romano"
