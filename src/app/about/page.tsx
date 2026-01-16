@@ -105,8 +105,8 @@ export default function AboutPage() {
                     <p className="text-xl text-gray-600 text-center mb-12 max-w-2xl mx-auto">
                         The heart and soul behind every delicious dish
                     </p>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                        <div className="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div className="flex flex-wrap justify-center gap-8 max-w-6xl mx-auto">
+                        <div className="w-full max-w-sm bg-white rounded-xl shadow-md overflow-hidden">
                             <div className="h-64 bg-gray-200"></div>
                             <div className="p-6 text-center">
                                 <h3 className="text-xl font-bold mb-1">Giuseppe Romano</h3>
@@ -117,7 +117,7 @@ export default function AboutPage() {
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div className="w-full max-w-sm bg-white rounded-xl shadow-md overflow-hidden">
                             <div className="h-64 bg-gray-200"></div>
                             <div className="p-6 text-center">
                                 <h3 className="text-xl font-bold mb-1">Maria Romano</h3>
@@ -128,7 +128,7 @@ export default function AboutPage() {
                             </div>
                         </div>
 
-                        <div className="bg-white rounded-xl shadow-md overflow-hidden">
+                        <div className="w-full max-w-sm bg-white rounded-xl shadow-md overflow-hidden">
                             <div className="h-64 bg-gray-200"></div>
                             <div className="p-6 text-center">
                                 <h3 className="text-xl font-bold mb-1">Antonio Romano</h3>
