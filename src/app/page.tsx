@@ -23,7 +23,7 @@ export default function Home() {
         />
 
         <div className="relative z-20 text-center px-4 max-w-4xl">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in text-gray-200">
             Authentic Italian Cuisine
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-200">
