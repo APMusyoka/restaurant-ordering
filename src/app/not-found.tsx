@@ -11,7 +11,7 @@ export default function NotFound() {
                     <div className="mb-8">
                         <UtensilsCrossed
                             size={80}
-                            className="mx-auto text-orange-500 mb-4"
+                            className="mx-auto text-orange-500 mt-4"
                             strokeWidth={1.5}
                         />
                         <h1 className="text-9xl font-bold text-orange-500 mb-4">404</h1>
