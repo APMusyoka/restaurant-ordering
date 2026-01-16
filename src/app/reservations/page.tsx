@@ -69,7 +69,7 @@ export default function ReservationsPage() {
             {/* Hero Section */}
             <section className="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-20">
                 <div className="container mx-auto px-4 text-center">
-                    <CalendarDays size={48} className="mx-auto mb-4" />
+                    <CalendarDays size={48} className="mx-auto my-4" />
                     <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-200">Reserve a Table</h1>
                     <p className="text-xl md:text-2xl max-w-2xl mx-auto">
                         Book your table for an unforgettable Italian dining experience

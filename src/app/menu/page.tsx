@@ -31,7 +31,7 @@ export default function MenuPage() {
             {/* Hero Section */}
             <section className="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-20">
                 <div className="container mx-auto px-4 text-center">
-                    <div className="flex justify-center mb-4">
+                    <div className="flex justify-center my-4">
                         <UtensilsCrossed size={48} />
                     </div>
                     <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-200">Our Menu</h1>

@@ -203,7 +203,7 @@ export default function Home() {
                   <MapPin className="mr-4 mt-1 text-orange-500 flex-shrink-0" size={24} />
                   <div>
                     <p className="font-semibold mb-1">Address</p>
-                    <p className="text-gray-600">
+                    <p className="text-gray-200">
                       {restaurantInfo.address.street}<br />
                       {restaurantInfo.address.city}, {restaurantInfo.address.state} {restaurantInfo.address.zipCode}
                     </p>
@@ -213,7 +213,7 @@ export default function Home() {
                   <Phone className="mr-4 text-orange-500 flex-shrink-0" size={24} />
                   <div>
                     <p className="font-semibold mb-1">Phone</p>
-                    <a href={`tel:${restaurantInfo.phone}`} className="text-gray-600 hover:text-orange-500">
+                    <a href={`tel:${restaurantInfo.phone}`} className="text-gray-200 hover:text-orange-500">
                       {restaurantInfo.phone}
                     </a>
                   </div>
