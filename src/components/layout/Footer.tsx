@@ -54,7 +54,7 @@ export function Footer() {
 
                     {/* Quick Links */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+                        <h3 className="text-lg font-semibold mb-4 text-gray-200">Quick Links</h3>
                         <ul className="space-y-2">
                             <li>
                                 <Link href="/menu" className="text-gray-300 hover:text-orange-500 transition-colors">
@@ -91,7 +91,7 @@ export function Footer() {
 
                     {/* Hours */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4">Opening Hours</h3>
+                        <h3 className="text-lg font-semibold mb-4 text-gray-200">Opening Hours</h3>
                         <ul className="space-y-2 text-gray-300">
                             <li className="flex justify-between">
                                 <span>Mon - Thu:</span>
@@ -114,7 +114,7 @@ export function Footer() {
 
                     {/* Contact */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+                        <h3 className="text-lg font-semibold mb-4 text-gray-200">Contact Us</h3>
                         <ul className="space-y-3 text-gray-300">
                             <li className="flex items-start">
                                 <MapPin size={20} className="mr-2 mt-0.5 flex-shrink-0" />

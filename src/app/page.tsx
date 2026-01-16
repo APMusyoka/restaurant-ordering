@@ -94,7 +94,7 @@ export default function Home() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Popular Dishes</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-gray-200">Popular Dishes</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
               Discover our most loved dishes, crafted with passion and authentic Italian traditions
             </p>
@@ -157,7 +157,7 @@ export default function Home() {
                   />
                 ))}
               </div>
-              <span className="text-xl font-semibold">{averageRating.toFixed(1)} / 5.0</span>
+              <span className="text-xl font-semibold text-gray-600">{averageRating.toFixed(1)} / 5.0</span>
             </div>
             <p className="text-gray-600">Based on {reviews.length} reviews</p>
           </div>
@@ -177,7 +177,7 @@ export default function Home() {
                   </div>
                   <p className="text-gray-700 mb-4 italic">&quot;{review.comment}&quot;</p>
                   <div className="flex items-center justify-between">
-                    <p className="font-semibold">{review.customerName}</p>
+                    <p className="font-semibold text-gray-600">{review.customerName}</p>
                     {review.verified && (
                       <span className="text-xs text-green-600 bg-green-100 px-2 py-1 rounded">
                         Verified
@@ -197,7 +197,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Location */}
             <div>
-              <h2 className="text-3xl font-bold mb-6">Visit Us</h2>
+              <h2 className="text-3xl font-bold mb-6 text-gray-200">Visit Us</h2>
               <div className="space-y-4 mb-8">
                 <div className="flex items-start">
                   <MapPin className="mr-4 mt-1 text-orange-500 flex-shrink-0" size={24} />
@@ -226,7 +226,7 @@ export default function Home() {
 
             {/* Hours */}
             <div>
-              <h2 className="text-3xl font-bold mb-6">Opening Hours</h2>
+              <h2 className="text-3xl font-bold mb-6 text-gray-200">Opening Hours</h2>
               <div className="bg-white rounded-xl shadow-md p-8">
                 <div className="flex items-center mb-6">
                   <Clock className="mr-3 text-orange-500" size={24} />
@@ -235,7 +235,7 @@ export default function Home() {
                 <div className="space-y-3">
                   {Object.entries(restaurantInfo.hours).map(([day, hours]) => (
                     <div key={day} className="flex justify-between py-2 border-b border-gray-100 last:border-0">
-                      <span className="font-medium capitalize">{day}</span>
+                      <span className="font-medium capitalize text-gray-600">{day}</span>
                       <span className="text-gray-600">
                         {hours.closed ? 'Closed' : `${hours.open} - ${hours.close}`}
                       </span>
@@ -251,7 +251,7 @@ export default function Home() {
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-orange-500 to-orange-600 text-white">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">Ready to Order?</h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gray-200">Ready to Order?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
             Enjoy authentic Italian cuisine from the comfort of your home with our easy online ordering
           </p>
