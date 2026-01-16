@@ -5,6 +5,7 @@ import { menuItems } from '@/data/menu';
 import { reviews, averageRating, restaurantInfo } from '@/data/restaurant';
 import { Star, Clock, MapPin, Phone, ArrowRight, UtensilsCrossed, Calendar, ShoppingBag } from 'lucide-react';
 import { formatPrice } from '@/lib/utils';
+import { GoogleMap } from '@/components/ui/GoogleMap';
 
 export default function Home() {
   const featuredItems = menuItems.filter(item => item.popular).slice(0, 6);
@@ -219,9 +220,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="bg-gray-200 h-64 rounded-xl flex items-center justify-center">
-                <p className="text-gray-500">Map integration here</p>
-              </div>
+              <GoogleMap className="h-64" />
             </div>
 
             {/* Hours */}

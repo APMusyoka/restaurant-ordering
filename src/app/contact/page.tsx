@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
 import { restaurantInfo } from '@/data/restaurant';
 import { Mail, Phone, MapPin, Clock, Send } from 'lucide-react';
+import { GoogleMap } from '@/components/ui/GoogleMap';
 import { useForm } from 'react-hook-form';
 
 interface ContactForm {
@@ -178,11 +179,8 @@ export default function ContactPage() {
                             </div>
 
                             {/* Map Placeholder */}
-                            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                                <div className="h-64 bg-gray-200 flex items-center justify-center">
-                                    <p className="text-gray-500">Google Maps integration here</p>
-                                </div>
-                            </div>
+                            {/* Map */}
+                            <GoogleMap className="h-72" />
                         </div>
                     </div>
                 </div>
