@@ -13,19 +13,21 @@ export default function MenuPage() {
     const [selectedCategory, setSelectedCategory] = useState<MenuCategory | 'all'>('all');
     const [searchQuery, setSearchQuery] = useState('');
     const [isFiltersOpen, setIsFiltersOpen] = useState(true);
+    const [hasAutoCollapsed, setHasAutoCollapsed] = useState(false);
     const { addItem } = useCart();
 
-    // Auto-collapse filters on scroll
+    // Auto-collapse filters on scroll (only once)
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 100 && isFiltersOpen) {
+            if (window.scrollY > 100 && !hasAutoCollapsed && isFiltersOpen) {
                 setIsFiltersOpen(false);
+                setHasAutoCollapsed(true);
             }
         };
 
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [isFiltersOpen]);
+    }, [hasAutoCollapsed, isFiltersOpen]);
 
     // Filter menu items
     const filteredItems = menuItems.filter((item) => {
