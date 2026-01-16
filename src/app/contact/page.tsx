@@ -49,8 +49,8 @@ export default function ContactPage() {
             {/* Hero Section */}
             <section className="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-20">
                 <div className="container mx-auto px-4 text-center">
-                    <Mail size={48} className="mx-auto mb-4" />
-                    <h1 className="text-5xl md:text-6xl font-bold mb-4">Contact Us</h1>
+                    <Mail size={48} className="mx-auto my-4" />
+                    <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-200">Contact Us</h1>
                     <p className="text-xl md:text-2xl max-w-2xl mx-auto">
                         We&apos;d love to hear from you. Get in touch with us today!
                     </p>

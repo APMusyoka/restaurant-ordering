@@ -34,7 +34,7 @@ export default function MenuPage() {
                     <div className="flex justify-center mb-4">
                         <UtensilsCrossed size={48} />
                     </div>
-                    <h1 className="text-5xl md:text-6xl font-bold mb-4">Our Menu</h1>
+                    <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-200">Our Menu</h1>
                     <p className="text-xl md:text-2xl max-w-2xl mx-auto">
                         Explore our delicious selection of authentic Italian dishes, crafted with passion and the finest ingredients
                     </p>
@@ -101,7 +101,7 @@ export default function MenuPage() {
             {/* CTA Section */}
             <section className="py-16 bg-gradient-to-r from-orange-500 to-orange-600 text-white">
                 <div className="container mx-auto px-4 text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-200">
                         Can&apos;t decide? Let us help!
                     </h2>
                     <p className="text-lg mb-6 max-w-2xl mx-auto">

@@ -70,7 +70,7 @@ export default function ReservationsPage() {
             <section className="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-20">
                 <div className="container mx-auto px-4 text-center">
                     <CalendarDays size={48} className="mx-auto mb-4" />
-                    <h1 className="text-5xl md:text-6xl font-bold mb-4">Reserve a Table</h1>
+                    <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-200">Reserve a Table</h1>
                     <p className="text-xl md:text-2xl max-w-2xl mx-auto">
                         Book your table for an unforgettable Italian dining experience
                     </p>
@@ -109,8 +109,8 @@ export default function ReservationsPage() {
                                             type="button"
                                             onClick={() => setSelectedTime(time)}
                                             className={`py-2 px-3 rounded-lg font-medium text-sm transition-all ${selectedTime === time
-                                                    ? 'bg-orange-500 text-white'
-                                                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                                                ? 'bg-orange-500 text-white'
+                                                : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                                                 }`}
                                         >
                                             {time}

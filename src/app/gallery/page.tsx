@@ -35,8 +35,8 @@ export default function GalleryPage() {
             {/* Hero Section */}
             <section className="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-20">
                 <div className="container mx-auto px-4 text-center">
-                    <Camera size={48} className="mx-auto mb-4" />
-                    <h1 className="text-5xl md:text-6xl font-bold mb-4">Gallery</h1>
+                    <Camera size={48} className="mx-auto my-4" />
+                    <h1 className="text-5xl md:text-6xl font-bold mb-4 text-gray-200">Gallery</h1>
                     <p className="text-xl md:text-2xl max-w-2xl mx-auto">
                         A visual journey through our dishes and dining experience
                     </p>
@@ -52,8 +52,8 @@ export default function GalleryPage() {
                                 key={category.id}
                                 onClick={() => setSelectedCategory(category.id)}
                                 className={`px-6 py-2 rounded-full font-semibold transition-all ${selectedCategory === category.id
-                                        ? 'bg-orange-500 text-white shadow-md'
-                                        : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                                    ? 'bg-orange-500 text-white shadow-md'
+                                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
                                     }`}
                             >
                                 {category.label}
