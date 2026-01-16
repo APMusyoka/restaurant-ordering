@@ -57,10 +57,10 @@ export default function MenuPage() {
             </section>
 
             {/* Search and Filter Section */}
-            <section className="bg-white sticky top-16 md:top-20 z-40 shadow-md transition-all duration-300">
+            <section className="bg-white sticky top-20 z-40 shadow-md transition-all duration-300">
                 <div className="container mx-auto px-4 py-4">
                     {/* Search Bar & Toggle */}
-                    <div className="max-w-xl mx-auto flex gap-2 items-center mb-4 transition-all duration-300">
+                    <div className={`max-w-xl mx-auto flex gap-2 items-center transition-all duration-300 ${isFiltersOpen ? 'mb-4' : 'mb-0'}`}>
                         <div className="relative flex-1">
                             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400" size={20} />
                             <input

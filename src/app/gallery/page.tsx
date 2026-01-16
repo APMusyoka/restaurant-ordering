@@ -59,7 +59,7 @@ export default function GalleryPage() {
             </section>
 
             {/* Category Filter */}
-            <section className="bg-white sticky top-16 md:top-20 z-40 shadow-md transition-all duration-300">
+            <section className="bg-white sticky top-20 z-40 shadow-md transition-all duration-300">
                 <div className="container mx-auto px-4 py-4">
                     {/* Toggle Bar */}
                     <div className={`max-w-xl mx-auto flex gap-2 items-center transition-all duration-300 ${isFiltersOpen ? 'mb-4' : 'mb-0'}`}>
