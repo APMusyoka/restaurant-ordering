@@ -39,7 +39,7 @@ export function Header() {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden md:flex items-center space-x-8">
+                    <nav className="hidden lg:flex items-center space-x-8">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.href}
@@ -52,7 +52,7 @@ export function Header() {
                     </nav>
 
                     {/* Right Actions */}
-                    <div className="hidden md:flex items-center space-x-4">
+                    <div className="hidden lg:flex items-center space-x-4">
                         <a href="tel:+15551234567" className="flex items-center text-gray-700 hover:text-orange-500 transition-colors">
                             <Phone size={20} className="mr-2" />
                             <span className="font-medium">(555) 123-4567</span>
@@ -72,7 +72,7 @@ export function Header() {
 
                     {/* Mobile Menu Button */}
                     <button
-                        className="md:hidden p-2"
+                        className="lg:hidden p-2"
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
                         aria-label="Toggle menu"
                     >
@@ -82,7 +82,7 @@ export function Header() {
 
                 {/* Mobile Navigation */}
                 {isMenuOpen && (
-                    <nav className="md:hidden py-4 border-t">
+                    <nav className="lg:hidden py-4 border-t">
                         <div className="flex flex-col space-y-4">
                             {navLinks.map((link) => (
                                 <Link
