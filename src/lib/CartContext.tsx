@@ -1,6 +1,7 @@
 'use client';
 
 import { createContext, useContext, useState, ReactNode } from 'react';
+import toast from 'react-hot-toast';
 import { CartItem, MenuItem } from '@/types';
 import { calculateCartTotal, generateId } from '@/lib/utils';
 
@@ -33,10 +34,12 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
             return [...prevItems, { ...item, quantity }];
         });
+        toast.success(`Added ${item.name} to cart`);
     };
 
     const removeItem = (itemId: string) => {
         setItems((prevItems) => prevItems.filter((item) => item.id !== itemId));
+        toast.success('Item removed from cart');
     };
 
     const updateQuantity = (itemId: string, quantity: number) => {
@@ -54,6 +57,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
     const clearCart = () => {
         setItems([]);
+        toast.success('Cart cleared');
     };
 
     const subtotal = items.reduce((sum, item) => sum + item.price * item.quantity, 0);

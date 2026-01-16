@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { CartProvider } from "@/lib/CartContext";
+import { ToastProvider } from "@/components/providers/ToastProvider";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -35,6 +36,7 @@ export default function RootLayout({
           <Header />
           {children}
           <Footer />
+          <ToastProvider />
         </CartProvider>
       </body>
     </html>
